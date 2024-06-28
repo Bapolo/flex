@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <title>Flex container</title>
+
+    <style>
+
+        body
+        {
+            background-image: url('https://picsum.photos/1920/1080');
+            background-size: cover;
+            background-position: center;
+            vertical-align: middle;
+            font-family: sans-serif;
+        }
+
+        div.container
+        {
+            width: 60%;
+            margin: auto;
+            padding: 2rem;
+            border: 1px solid rgba(0, 0, 0, 0.3);
+            border-radius: 8px;
+            background-color: rgba(255, 255, 255, 0.3);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .header img
+        {
+            display: block;
+            width: 10rem;
+            margin: auto;
+            border-radius: 50%;
+        }
+
+        h1
+        {
+            text-align: center;
+        }
+
+        p 
+        {
+            color:rgba(0, 0, 0, 0.8);
+            text-align: justify;
+            line-height: 1.5;
+            font-size: 1.15 rem;
+        }
+
+        .socials
+        {
+            display: flex;
+            flex-flow: row wrap;
+            font-size: 2.5rem;
+            list-style-type: none;
+            justify-content: space-around;
+            padding: 0;
+        }
+
+ 
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <img id="imgHeader" src="https://yt3.googleusercontent.com/PsswmdbCWRzto2F8_6bRuh1rMZWh8U_AXz024aoho9pjawzssZBbh1btuIoTEzY6DKOmjcVylg=s160-c-k-c0x00ffffff-no-rj" alt="foto alternativa">
+            <h1 id="titulo">Jesus Pedro Bapolo</h1>
+        </header>
+        <main class="corpo">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis libero et risus dapibus, vitae sodales mi facilisis. Proin sit amet libero quam. Duis in erat vel odio vehicula fermentum sed id nulla. Sed venenatis eros nec est finibus, vel dapibus tortor tristique. Vestibulum ac tellus ac turpis consequat ullamcorper. Nunc varius risus vel nisl ultricies, vitae suscipit nunc fermentum. Aliquam erat volutpat. Quisque ac nulla vel justo vestibulum maximus. Morbi a risus ut tortor posuere faucibus. Phasellus lacinia malesuada eros, a maximus justo ullamcorper in. Nullam non erat at lectus blandit bibendum non eget velit.</p>
+        </main>
+        <footer>
+            <ul  class="socials">
+                <li class="inconeSocial"><a href=""><i class="fa-brands fa-facebook"></i></a></li>
+                <li class="inconeSocial"><a href=""><i class="fa-brands fa-twitter"></i></a></li>
+                <li class="inconeSocial"><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+                <li class="inconeSocial"><a href=""><i class="fa-brands fa-whatsapp"></i></a></li>
+            </ul>
+        </footer>
+    </div>
+</body>
+</html>
