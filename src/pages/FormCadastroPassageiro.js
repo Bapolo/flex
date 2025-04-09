@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom"
 import Botao from "../componenentes/Botao"
+import { BsFillLockFill } from "react-icons/bs";
 
 function FormCadastroPassageiro()
 {
@@ -18,7 +19,7 @@ function FormCadastroPassageiro()
     }
 
     return (
-        <div className="h-100">
+        <div className="h-100 ">
             <Botao type="button" className="btn" texto="<- voltar" onClick= { () => redirecionar("/") }/>
 
             <form onSubmit = { subimeterFormulario } className="d-flex flex-column">
@@ -26,19 +27,45 @@ function FormCadastroPassageiro()
 
                 <div className="mb-3">
                     <label className="form-label" htmlFor="nomeCompleto">Nome completo</label>
-                    <input className="form-control" type="text" id="nomeCompleto" placeholder="nome completo como no BI"/>
+                    <input className="form-control form-control-lg" type="text" id="nomeCompleto" placeholder="nome completo como no BI" required/>
                 </div>
 
                 <div className="mb-3">
                     <label className="form-label" htmlFor="telefone">Número de telefone</label>                    
                     <div className="input-group ">
                         <span className="input-group-text">+244</span>
-                        <input type="tel" className="form-control" id="telefone" placeholder="923433221" />
+                        <input type="tel" className="form-control form-control-lg" id="telefone" placeholder="923433221" required/>
                     </div>
                 </div>
 
-                <Botao texto="cadastrar" type="submit" className="btn m-auto" style={{backgroundColor: "#FD8F14", width: 40+"%"}}/>
+                <div className="mb-3">
+                    <label className="form-label" htmlFor="email">Email</label>                    
+                    <div className="input-group ">
+                        <span className="input-group-text">@</span>
+                        <input type="Email" className="form-control form-control-lg" id="email" placeholder="exemplo@gmail.com" />
+                    </div>
+                </div>
+
+                <div className="mb-3">
+                    <label className="form-label" htmlFor="senha">Senha</label>                    
+                    <div className="input-group ">
+                        <span className="input-group-text"><BsFillLockFill /></span>
+                        <input type="password" className="form-control form-control-lg" id="senha" placeholder="******" required/>
+                    </div>
+                </div>
+
+                <div className="mb-3">
+                    <label className="form-label" htmlFor="conirmarSenha">Conirmar Senha</label>                    
+                    <div className="input-group ">
+                        <span className="input-group-text"><BsFillLockFill /></span>
+                        <input type="password" className="form-control form-control-lg" id="conirmarSenha" placeholder="******" required/>
+                    </div>
+                </div>
+
+                <Botao texto="cadastrar" type="submit" className="btn text-light" style={{backgroundColor: "#FD8F14"}}/>
             </form>
+
+            <p className="m-5 text-primary text-center" onClick = { () => redirecionar("/login")}><u>fazer login</u></p>
         </div>
     )
 }
